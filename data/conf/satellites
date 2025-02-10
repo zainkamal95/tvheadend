@@ -268,15 +268,19 @@
     "pos": -80
   },
   {
-    "name": "Eutelsat 7 West A/Eutelsat 8 West C/Nilesat 102/201",
+    "name": "Eutelsat 7 West A/Eutelsat 8 West B",
     "pos": -73
+  },
+  {
+    "name": "Nilesat 201/301",
+    "pos": -70
   },
   {
     "name": "Eutelsat 5 West A",
     "pos": -50
   },
   {
-    "name": "Amos 2/3",
+    "name": "Amos 3/7",
     "pos": -40
   },
   {
@@ -296,7 +300,7 @@
     "pos": 70
   },
   {
-    "name": "Eutelsat 9A/Ka-Sat 9A",
+    "name": "Eutelsat 9B/Ka-Sat",
     "pos": 90
   },
   {
@@ -304,7 +308,7 @@
     "pos": 100
   },
   {
-    "name": "Eutelsat Hot Bird 13B/13C/13D",
+    "name": "Eutelsat Hot Bird 13F/13G",
     "pos": 130
   },
   {
@@ -316,7 +320,7 @@
     "pos": 170
   },
   {
-    "name": "Astra 1KR/1L/1M/1N",
+    "name": "Astra 1P",
     "pos": 192
   },
   {
