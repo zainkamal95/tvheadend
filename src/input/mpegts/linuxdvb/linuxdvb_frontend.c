@@ -944,7 +944,7 @@ linuxdvb_frontend_monitor ( void *aux )
 
   /* Set default period */
   if (fe_status != lfe->lfe_status) {
-    tvhdebug(LS_LINUXDVB, "%s - status %7s (%s%s%s%s%s%s)", buf,
+    tvhdebug(LS_LINUXDVB, "%s - status %1s (%s%s%s%s%s%s)", buf,
              signal2str(status),
              (fe_status & FE_HAS_SIGNAL) ?  "SIGNAL"  : "",
              (fe_status & FE_HAS_CARRIER) ? " | CARRIER" : "",
