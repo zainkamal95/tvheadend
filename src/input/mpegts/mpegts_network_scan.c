@@ -167,7 +167,7 @@ mpegts_network_scan_mux_add ( mpegts_network_t *mn, mpegts_mux_t *mm )
   TAILQ_INSERT_SORTED_R(&mn->mn_scan_ipend, mpegts_mux_queue, mm,
                         mm_scan_link, mm_cmp);
   mtimer_arm_rel(&mn->mn_scan_timer, mpegts_network_scan_timer_cb,
-                 mn, sec2mono(10));
+                 mn, sec2mono(1));
 }
 
 static void
@@ -177,7 +177,7 @@ mpegts_network_scan_idle_mux_add ( mpegts_network_t *mn, mpegts_mux_t *mm )
   TAILQ_INSERT_SORTED_R(&mn->mn_scan_ipend, mpegts_mux_queue, mm,
                         mm_scan_link, mm_cmp_idle);
   mtimer_arm_rel(&mn->mn_scan_timer, mpegts_network_scan_timer_cb,
-                 mn, sec2mono(10));
+                 mn, sec2mono(1));
 }
 
 /* Finished */
