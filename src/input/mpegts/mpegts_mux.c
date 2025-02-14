@@ -102,7 +102,7 @@ mpegts_mux_scan_active
     t = mpegts_input_grace(mi, mm);
   
     /* Setup timeout */
-    mtimer_arm_rel(&mm->mm_scan_timeout, mpegts_mux_scan_timeout, mm, sec2mono(t));
+    mtimer_arm_rel(&mm->mm_scan_timeout, mpegts_mux_scan_timeout, mm, sec2mono(3));
   }
 }
 
@@ -1283,10 +1283,10 @@ mpegts_mux_post_create ( mpegts_mux_t *mm )
   /* Initial scan */
   if (mm->mm_scan_result == MM_SCAN_NONE || !mn->mn_skipinitscan)
     mpegts_network_scan_queue_add(mm, SUBSCRIPTION_PRIO_SCAN_INIT,
-                                  SUBSCRIPTION_INITSCAN, 10);
+                                  SUBSCRIPTION_INITSCAN, 3);
   else if (mm->mm_network->mn_idlescan)
     mpegts_network_scan_queue_add(mm, SUBSCRIPTION_PRIO_SCAN_IDLE,
-                                  SUBSCRIPTION_IDLESCAN, 10);
+                                  SUBSCRIPTION_IDLESCAN, 3);
 
   return mm;
 }
