@@ -225,7 +225,7 @@ mpegts_network_scan_mux_done0
 
   /* Re-enable? */
   if (weight > 0)
-    mpegts_network_scan_queue_add(mm, weight, mm->mm_scan_flags, 10);
+    mpegts_network_scan_queue_add(mm, weight, mm->mm_scan_flags, 1);
 }
 
 /* Failed - couldn't start */
