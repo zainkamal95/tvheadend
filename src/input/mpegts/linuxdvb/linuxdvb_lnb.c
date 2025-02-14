@@ -225,7 +225,7 @@ linuxdvb_lnb_conf_t linuxdvb_lnb_all[] = {
   },
   {
     { {
-      .ld_type    = "Standard",
+      .ld_type    = "Air Network",
       .ld_tune    = linuxdvb_lnb_standard_tune,
       },
       .lnb_freq   = linuxdvb_lnb_standard_freq,
@@ -233,7 +233,7 @@ linuxdvb_lnb_conf_t linuxdvb_lnb_all[] = {
       .lnb_band   = linuxdvb_lnb_standard_band,
       .lnb_pol    = linuxdvb_lnb_standard_pol,
     },
-    .lnb_low    = 10000000,
+    .lnb_low    = 10600000,
     .lnb_high   = 0,
     .lnb_switch = 0,
   },
