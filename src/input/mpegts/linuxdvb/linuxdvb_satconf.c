@@ -146,6 +146,18 @@ linuxdvb_satconf_class_network_getset(0);
 linuxdvb_satconf_class_network_getset(1);
 linuxdvb_satconf_class_network_getset(2);
 linuxdvb_satconf_class_network_getset(3);
+linuxdvb_satconf_class_network_getset(4);
+linuxdvb_satconf_class_network_getset(5);
+linuxdvb_satconf_class_network_getset(6);
+linuxdvb_satconf_class_network_getset(7);
+linuxdvb_satconf_class_network_getset(8);
+linuxdvb_satconf_class_network_getset(9);
+linuxdvb_satconf_class_network_getset(10);
+linuxdvb_satconf_class_network_getset(11);
+linuxdvb_satconf_class_network_getset(12);
+linuxdvb_satconf_class_network_getset(13);
+linuxdvb_satconf_class_network_getset(14);
+linuxdvb_satconf_class_network_getset(15);
 
 static void
 linuxdvb_satconf_class_get_title
@@ -446,6 +458,212 @@ const idclass_t linuxdvb_satconf_4port_class =
       .set      = linuxdvb_satconf_class_network_set3,
       .list     = linuxdvb_satconf_class_network_enum,
       .rend     = linuxdvb_satconf_class_network_rend3,
+      .opts     = PO_NOSAVE,
+    },
+    {}
+  }
+};
+
+/*
+ * 8&16 port switch
+ */
+const idclass_t linuxdvb_satconf_8&16port_class =
+{
+  .ic_super      = &linuxdvb_satconf_class,
+  .ic_class      = "linuxdvb_satconf_8&16port",
+  .ic_doc        = tvh_doc_linuxdvb_satconf_class,
+  .ic_caption    = N_("TV Adapters - SatConfig - 8&16-Port"),
+  .ic_properties = (const property_t[]) {
+    {
+      .type     = PT_STR,
+      .id       = "network_1",
+      .name     = N_("1"),
+      .desc     = N_("Network for port 1."),
+      .islist   = 1,
+      .get      = linuxdvb_satconf_class_network_get0,
+      .set      = linuxdvb_satconf_class_network_set0,
+      .list     = linuxdvb_satconf_class_network_enum,
+      .rend     = linuxdvb_satconf_class_network_rend0,
+      .opts     = PO_NOSAVE,
+    },
+    {
+      .type     = PT_STR,
+      .id       = "network_2",
+      .name     = N_("2"),
+      .desc     = N_("Network for port 2."),
+      .islist   = 1,
+      .get      = linuxdvb_satconf_class_network_get1,
+      .set      = linuxdvb_satconf_class_network_set1,
+      .list     = linuxdvb_satconf_class_network_enum,
+      .rend     = linuxdvb_satconf_class_network_rend1,
+      .opts     = PO_NOSAVE,
+    },
+    {
+      .type     = PT_STR,
+      .id       = "network_3",
+      .name     = N_("3"),
+      .desc     = N_("Network for port 3."),
+      .islist   = 1,
+      .get      = linuxdvb_satconf_class_network_get2,
+      .set      = linuxdvb_satconf_class_network_set2,
+      .list     = linuxdvb_satconf_class_network_enum,
+      .rend     = linuxdvb_satconf_class_network_rend2,
+      .opts     = PO_NOSAVE,
+    },
+    {
+      .type     = PT_STR,
+      .id       = "network_4",
+      .name     = N_("4"),
+      .desc     = N_("Network for port 4."),
+      .islist   = 1,
+      .get      = linuxdvb_satconf_class_network_get3,
+      .set      = linuxdvb_satconf_class_network_set3,
+      .list     = linuxdvb_satconf_class_network_enum,
+      .rend     = linuxdvb_satconf_class_network_rend3,
+      .opts     = PO_NOSAVE,
+    },
+      {
+      .type     = PT_STR,
+      .id       = "network_5",
+      .name     = N_("5"),
+      .desc     = N_("Network for port 5."),
+      .islist   = 1,
+      .get      = linuxdvb_satconf_class_network_get4,
+      .set      = linuxdvb_satconf_class_network_set4,
+      .list     = linuxdvb_satconf_class_network_enum,
+      .rend     = linuxdvb_satconf_class_network_rend4,
+      .opts     = PO_NOSAVE,
+    },
+    {
+      .type     = PT_STR,
+      .id       = "network_6",
+      .name     = N_("6"),
+      .desc     = N_("Network for port 6."),
+      .islist   = 1,
+      .get      = linuxdvb_satconf_class_network_get5,
+      .set      = linuxdvb_satconf_class_network_set5,
+      .list     = linuxdvb_satconf_class_network_enum,
+      .rend     = linuxdvb_satconf_class_network_rend5,
+      .opts     = PO_NOSAVE,
+    },
+    {
+      .type     = PT_STR,
+      .id       = "network_7",
+      .name     = N_("7"),
+      .desc     = N_("Network for port 7."),
+      .islist   = 1,
+      .get      = linuxdvb_satconf_class_network_get6,
+      .set      = linuxdvb_satconf_class_network_set6,
+      .list     = linuxdvb_satconf_class_network_enum,
+      .rend     = linuxdvb_satconf_class_network_rend6,
+      .opts     = PO_NOSAVE,
+    },
+    {
+      .type     = PT_STR,
+      .id       = "network_8",
+      .name     = N_("8"),
+      .desc     = N_("Network for port 8."),
+      .islist   = 1,
+      .get      = linuxdvb_satconf_class_network_get7,
+      .set      = linuxdvb_satconf_class_network_set7,
+      .list     = linuxdvb_satconf_class_network_enum,
+      .rend     = linuxdvb_satconf_class_network_rend7,
+      .opts     = PO_NOSAVE,
+    },
+      {
+      .type     = PT_STR,
+      .id       = "network_9",
+      .name     = N_("9"),
+      .desc     = N_("Network for port 9."),
+      .islist   = 1,
+      .get      = linuxdvb_satconf_class_network_get8,
+      .set      = linuxdvb_satconf_class_network_set8,
+      .list     = linuxdvb_satconf_class_network_enum,
+      .rend     = linuxdvb_satconf_class_network_rend8,
+      .opts     = PO_NOSAVE,
+    },
+    {
+      .type     = PT_STR,
+      .id       = "network_10",
+      .name     = N_("10"),
+      .desc     = N_("Network for port 10."),
+      .islist   = 1,
+      .get      = linuxdvb_satconf_class_network_get9,
+      .set      = linuxdvb_satconf_class_network_set9,
+      .list     = linuxdvb_satconf_class_network_enum,
+      .rend     = linuxdvb_satconf_class_network_rend9,
+      .opts     = PO_NOSAVE,
+    },
+    {
+      .type     = PT_STR,
+      .id       = "network_11",
+      .name     = N_("11"),
+      .desc     = N_("Network for port 11."),
+      .islist   = 1,
+      .get      = linuxdvb_satconf_class_network_get10,
+      .set      = linuxdvb_satconf_class_network_set10,
+      .list     = linuxdvb_satconf_class_network_enum,
+      .rend     = linuxdvb_satconf_class_network_rend10,
+      .opts     = PO_NOSAVE,
+    },
+    {
+      .type     = PT_STR,
+      .id       = "network_12",
+      .name     = N_("12"),
+      .desc     = N_("Network for port 12."),
+      .islist   = 1,
+      .get      = linuxdvb_satconf_class_network_get11,
+      .set      = linuxdvb_satconf_class_network_set11,
+      .list     = linuxdvb_satconf_class_network_enum,
+      .rend     = linuxdvb_satconf_class_network_rend11,
+      .opts     = PO_NOSAVE,
+    },
+      {
+      .type     = PT_STR,
+      .id       = "network_13",
+      .name     = N_("13"),
+      .desc     = N_("Network for port 13."),
+      .islist   = 1,
+      .get      = linuxdvb_satconf_class_network_get12,
+      .set      = linuxdvb_satconf_class_network_set12,
+      .list     = linuxdvb_satconf_class_network_enum,
+      .rend     = linuxdvb_satconf_class_network_rend12,
+      .opts     = PO_NOSAVE,
+    },
+    {
+      .type     = PT_STR,
+      .id       = "network_14",
+      .name     = N_("14"),
+      .desc     = N_("Network for port 14."),
+      .islist   = 1,
+      .get      = linuxdvb_satconf_class_network_get13,
+      .set      = linuxdvb_satconf_class_network_set13,
+      .list     = linuxdvb_satconf_class_network_enum,
+      .rend     = linuxdvb_satconf_class_network_rend13,
+      .opts     = PO_NOSAVE,
+    },
+    {
+      .type     = PT_STR,
+      .id       = "network_15",
+      .name     = N_("15"),
+      .desc     = N_("Network for port 15."),
+      .islist   = 1,
+      .get      = linuxdvb_satconf_class_network_get14,
+      .set      = linuxdvb_satconf_class_network_set14,
+      .list     = linuxdvb_satconf_class_network_enum,
+      .rend     = linuxdvb_satconf_class_network_rend14,
+      .opts     = PO_NOSAVE,
+    },
+    {
+      .type     = PT_STR,
+      .id       = "network_16",
+      .name     = N_("16"),
+      .desc     = N_("Network for port 16."),
+      .islist   = 1,
+      .get      = linuxdvb_satconf_class_network_get15,
+      .set      = linuxdvb_satconf_class_network_set15,
+      .list     = linuxdvb_satconf_class_network_enum,
+      .rend     = linuxdvb_satconf_class_network_rend15,
       .opts     = PO_NOSAVE,
     },
     {}
@@ -802,6 +1020,13 @@ static struct linuxdvb_satconf_type linuxdvb_satconf_types[] = {
     .name   = N_("4-Port switch (universal LNB)"),
     .idc    = &linuxdvb_satconf_4port_class,
     .ports  = 4,
+    .enable = 1,
+  },
+  {
+    .type   = "8&16port",
+    .name   = N_("8&16-Port switch (universal LNB)"),
+    .idc    = &linuxdvb_satconf_8&16port_class,
+    .ports  = 16,
     .enable = 1,
   },
   {
