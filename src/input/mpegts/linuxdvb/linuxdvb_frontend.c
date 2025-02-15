@@ -944,7 +944,7 @@ linuxdvb_frontend_monitor ( void *aux )
 
   /* Set default period */
   if (fe_status != lfe->lfe_status) {
-    tvhdebug(LS_LINUXDVB, "%s - status %7s (%s%s%s%s%s%s)", buf,
+    tvhdebug(LS_LINUXDVB, "%s - status %1s (%s%s%s%s%s%s)", buf,
              signal2str(status),
              (fe_status & FE_HAS_SIGNAL) ?  "SIGNAL"  : "",
              (fe_status & FE_HAS_CARRIER) ? " | CARRIER" : "",
@@ -2004,7 +2004,7 @@ linuxdvb_frontend_tune1
 
   /* Start monitor */
   if (!r) {
-    lfe->lfe_monitor = mclk() + sec2mono(4);
+    lfe->lfe_monitor = mclk() + sec2mono(0);
     mtimer_arm_rel(&lfe->lfe_monitor_timer, linuxdvb_frontend_monitor, lfe, ms2mono(50));
     lfe->lfe_ready = 1;
   }
