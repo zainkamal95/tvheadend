@@ -37,6 +37,7 @@ typedef enum {
   CARD_BETACRYPT,
   CARD_DVN,
   CARD_TONGFANG,
+  CARD_BISS,
   CARD_UNKNOWN
 } card_type_t;
 
