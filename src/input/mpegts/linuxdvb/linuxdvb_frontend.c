@@ -2004,7 +2004,7 @@ linuxdvb_frontend_tune1
 
   /* Start monitor */
   if (!r) {
-    lfe->lfe_monitor = mclk() + sec2mono(1);
+    lfe->lfe_monitor = mclk() + sec2mono(0);
     mtimer_arm_rel(&lfe->lfe_monitor_timer, linuxdvb_frontend_monitor, lfe, ms2mono(50));
     lfe->lfe_ready = 1;
   }
