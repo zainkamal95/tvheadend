@@ -78,6 +78,7 @@ typedef struct config {
   uint32_t hdhomerun_server_tuner_count;
   char *hdhomerun_server_model_name;
   int hdhomerun_server_enable;
+  uint32_t page_size_ui;
 } config_t;
 
 extern const idclass_t config_class;
