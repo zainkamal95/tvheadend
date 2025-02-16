@@ -886,16 +886,6 @@ ffmpeg_rebuild:
 	-rm ${BUILDDIR}/ffmpeg/ffmpeg-*/.tvh_build
 	$(MAKE) all
 
-# linuxdvb git tree
-$(ROOTDIR)/data/dvb-scan/.stamp:
-	@echo "Receiving data/dvb-scan from https://git.linuxtv.org/dtv-scan-tables.git"
-	@rm -rf $(ROOTDIR)/data/dvb-scan/*
-	@$(ROOTDIR)/support/getmuxlist $(ROOTDIR)/data/dvb-scan
-	@touch $@
-
-.PHONY: check_dvb_scan
-check_dvb_scan: $(ROOTDIR)/data/dvb-scan/.stamp
-
 # dvb-s / enigma2 / satellites.xml
 $(ROOTDIR)/data/dvb-scan/dvb-s/.stamp: $(ROOTDIR)/data/satellites.xml \
                                        $(ROOTDIR)/data/dvb-scan/.stamp
