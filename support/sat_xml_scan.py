@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/bin/sh
 #
 # Convert XML files from http://satellites-xml.org/ to scanfile format
 #
@@ -37,7 +37,7 @@ FEC = {
 MODULATION = {
   '0': 'AUTO',
   '1': 'QPSK',
-  '2': '8PSK'
+  '2': 'PSK/8'
 }
 
 SYSTEM = {
