@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 #
-# Convert XML files from http://satellites-xml.eu/ to scanfile format
+# Convert XML files from http://satellites-xml.org/ to scanfile format
 #
 
 import os
@@ -41,8 +41,8 @@ MODULATION = {
 }
 
 SYSTEM = {
-  '0': 'S',
-  '1': 'S2'
+  '0': 'DVB-S',
+  '1': 'DVB-S2'
 }
 
 def inspect(node):
@@ -78,7 +78,7 @@ def parse_sat(node):
       rate = child.attrib['symbol_rate']
       modulation = MODULATION[child.attrib['modulation']]
       system = SYSTEM[child.attrib['system']]
-      if system == 'S' and modulation == 'QPSK':
+      if system == 'DVB-S' and modulation == 'QPSK':
         fp.write('%s %s %s %s %s\n' %
           (system, freq, polarization, rate, fec))
       else:
@@ -92,7 +92,7 @@ if len(sys.argv) < 3:
     usage = 'python sat_xml_scan.py'
   else:
     usage = sys.argv[0]
-  print('Usage: %s satellite.xml /output/directory/path' % usage)
+  print('Usage: %s satellites.xml /output/directory/path' % usage)
   sys.exit(0)
 
 DIR = sys.argv[2]
