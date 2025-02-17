@@ -16,7 +16,7 @@ if [ -d "${DIR}/.git" ]; then
   cd "${LAST}" || exit 1
 # Fetch
 elif [ ! -d "${DIR}" ]; then
-  URL=https://git.linuxtv.org/dtv-scan-tables.git
+  URL=
   git clone $URL "${DIR}" &> /dev/null || exit 1
 fi
 
