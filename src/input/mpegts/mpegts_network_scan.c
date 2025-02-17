@@ -154,7 +154,7 @@ mpegts_network_scan_timer_cb ( void *p )
   /* Re-arm timer. Really this is just a safety measure as we'd normally
    * expect the timer to be forcefully triggered on finish of a mux scan
    */
-  mtimer_arm_rel(&mn->mn_scan_timer, mpegts_network_scan_timer_cb, mn, sec2mono(120));
+  mtimer_arm_rel(&mn->mn_scan_timer, mpegts_network_scan_timer_cb, mn, sec2mono(1120));
 }
 
 /******************************************************************************
