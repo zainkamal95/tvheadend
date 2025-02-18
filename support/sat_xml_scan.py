@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env python
 #
 # Convert XML files from http://satellites-xml.org/ to scanfile format
 #
