@@ -345,7 +345,7 @@
   },
   {
     "name": "Türksat 5A",
-    "pos": 31
+    "pos": 310
   },
   {
     "name": "Astra 5B",
@@ -365,7 +365,7 @@
   },
   {
     "name": "Express AM7",
-    "pos": 40
+    "pos": 400
   },
   {
     "name": "Türksat 3A/4A/5B",
@@ -385,11 +385,11 @@
   },
   {
     "name": "Yamal 601",
-    "pos": 49
+    "pos": 490
   },
   {
     "name": "Türksat 4B",
-    "pos": 50
+    "pos": 500
   },
   {
     "name": "Belintersat 1",
@@ -397,7 +397,7 @@
   },
   {
     "name": "TurkmenÄlem/MonacoSat",
-    "pos": 52
+    "pos": 520
   },
   {
     "name": "Al Yah 1",
@@ -405,7 +405,7 @@
   },
   {
     "name": "Express AM6",
-    "pos": 53
+    "pos": 530
   },
   {
     "name": "G-Sat 8/16 &amp; Yamal 402",
@@ -413,11 +413,11 @@
   },
   {
     "name": "Express AT1",
-    "pos": 56
+    "pos": 560
   },
   {
     "name": "NSS 12",
-    "pos": 57
+    "pos": 570
   },
   {
     "name": "KazSat 3",
@@ -425,15 +425,15 @@
   },
   {
     "name": "Intelsat 39",
-    "pos": 62
+    "pos": 620
   },
   {
     "name": "Amos 4",
-    "pos": 65
+    "pos": 650
   },
   {
     "name": "Intelsat 17",
-    "pos": 66
+    "pos": 660
   },
   {
     "name": "Intelsat 20/36",
@@ -449,11 +449,11 @@
   },
   {
     "name": "G-Sat 18",
-    "pos": 74
+    "pos": 740
   },
   {
     "name": "ABS 2/2A",
-    "pos": 75
+    "pos": 750
   },
   {
     "name": "Apstar 7",
@@ -465,11 +465,11 @@
   },
   {
     "name": "Express 80",
-    "pos": 80
+    "pos": 800
   },
   {
     "name": "G-Sat 10/24/30",
-    "pos": 83
+    "pos": 830
   },
   {
     "name": "Horizons 2/Intelsat 15",
@@ -485,11 +485,11 @@
   },
   {
     "name": "ST 2",
-    "pos": 88
+    "pos": 880
   },
   {
     "name": "Yamal 401",
-    "pos": 90
+    "pos": 900
   },
   {
     "name": "Measat 3b/3d",
@@ -505,7 +505,7 @@
   },
   {
     "name": "SES 8/12",
-    "pos": 95
+    "pos": 950
   },
   {
     "name": "Express 103",
@@ -517,7 +517,7 @@
   },
   {
     "name": "ChinaSat 11",
-    "pos": 98
+    "pos": 980
   },
   {
     "name": "AsiaSat 5",
