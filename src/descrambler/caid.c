@@ -58,7 +58,7 @@ static struct caid_tab caidnametab[] = {
   { "BARCO AS",         0x2300, 0xff00 },
   { "StarGuide",        0x2400, 0xff00 },
   { "Mentor",           0x2500, 0xff00 },
-  { "EBU",              0x2600, 0xff00 },
+  { "BISS",             0x2600, 0xff00 },
   { "DRECrypt ",        0x2710, 0xffff },
   { "GI",               0x4700, 0xff00 },
   { "Telemann",         0x4800, 0xff00 },
@@ -168,8 +168,6 @@ detect_card_type(const uint16_t caid)
       return CARD_BETACRYPT;
     case 0x18:
       return CARD_NAGRA;
-    case 0x26:
-      return CARD_BISS;
     default:
       return CARD_UNKNOWN;
   }
