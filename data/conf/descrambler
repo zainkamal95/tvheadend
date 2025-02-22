@@ -26,7 +26,7 @@
       "name": "BISS",
       "caid": "2600",
       "mask": "FFFF",
-      "constcw": 1
+      "interval": 1000
     },
     {
       "name": "PowerVu",
