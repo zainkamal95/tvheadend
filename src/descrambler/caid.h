@@ -37,7 +37,6 @@ typedef enum {
   CARD_BETACRYPT,
   CARD_DVN,
   CARD_TONGFANG,
-  CARD_BISS,
   CARD_UNKNOWN
 } card_type_t;
 
@@ -49,7 +48,7 @@ card_type_t detect_card_type(const uint16_t caid);
 static inline int caid_is_irdeto(uint16_t caid) { return (caid >> 8) == 0x06; }
 static inline int caid_is_powervu(uint16_t caid) { return (caid >> 8) == 0x0e; }
 static inline int caid_is_betacrypt(uint16_t caid) { return (caid >> 8) == 0x17; }
-static inline int caid_is_dvn(uint16_t caid) { return caid == 0x4a30; }
 static inline int caid_is_biss(uint16_t caid) { return caid == 0x2600; }
+static inline int caid_is_dvn(uint16_t caid) { return caid == 0x4a30; }
 
 #endif /* __TVH_CAID_H__ */
