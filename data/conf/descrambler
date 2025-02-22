@@ -23,11 +23,11 @@
   ],
   "caid": [
     {
-      "name": "BISS",
-      "caid": "2600",
+      "name": "Biss",
+      "____": "Rename _caid to caid for activation!",
+      "_caid": "2600",
       "mask": "FFFF",
-      "interval": 1000,
-      "paritycheck": 2
+      "quickecm": 1
     },
     {
       "name": "PowerVu",
