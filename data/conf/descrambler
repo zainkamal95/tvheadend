@@ -26,7 +26,8 @@
       "name": "BISS",
       "caid": "2600",
       "mask": "FFFF",
-      "interval": 1000
+      "interval": 1000,
+      "paritycheck": 2
     },
     {
       "name": "PowerVu",
