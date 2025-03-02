@@ -11,12 +11,17 @@ Status
 [![Github last commit](https://img.shields.io/github/last-commit/tvheadend/tvheadend)](https://github.com/tvheadend/tvheadend)
 
 [![Releases](https://img.shields.io/github/tag/tvheadend/tvheadend.svg?style=flat-square)](https://github.com/tvheadend/tvheadend/releases)
-[![License](https://img.shields.io/badge/license-GPLv3-blue)](./LICENSE.md) 
+[![License](https://img.shields.io/badge/license-GPLv3-blue)](./LICENSE.md)
 [![GitHub Activity](https://img.shields.io/github/commit-activity/y/tvheadend/tvheadend.svg?label=commits)](https://github.com/tvheadend/tvheadend/commits)
+
+
 
 
 What it is
 ----------
+
+This is a lightly patched version of tvheadend in order to support the neumodvb api.
+
 
 ![tvheadend front page](https://github.com/tvheadend/tvheadend/raw/master/src/webui/static/img/epg.png)
 
