@@ -23,7 +23,6 @@
 #include "atomic.h"
 #include "tvhpoll.h"
 #include "streaming.h"
-#include "neumodmx.h"
 
 #include <sys/ioctl.h>
 #include <sys/types.h>
