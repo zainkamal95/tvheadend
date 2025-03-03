@@ -23,6 +23,7 @@
 #include "atomic.h"
 #include "tvhpoll.h"
 #include "streaming.h"
+#include "neumodmx.h"
 
 #include <sys/ioctl.h>
 #include <sys/types.h>
@@ -31,7 +32,6 @@
 #include <fcntl.h>
 #include <assert.h>
 #include <linux/dvb/dmx.h>
-#include "neumodmx.h"
 #include <linux/dvb/frontend.h>
 
 #define NOSIGNAL(x) (((x) & FE_HAS_SIGNAL) == 0)
