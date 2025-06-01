@@ -516,21 +516,17 @@ time_t epggrab_get_next_int(void)
 {
   time_t ret_time;
   struct timespec current_time;
-
-  clock_gettime(CLOCK_REALTIME, &current_time);
-
-  tvh_mutex_lock(&epggrab_mutex);
-
-  if(cron_multi_next(epggrab_cron_multi, current_time.tv_sec, &ret_time))  //Zero means success
-  {
-    ret_time = 0;   //Reset to zero in case it was set to garbage during failure.
-  }
   
-  tvh_mutex_unlock(&epggrab_mutex);
-
-  return ret_time;
-
-}//END function
+  clock_gettime(CLOCK_REALTIME, &current_time);
+  if(!cron_multi_next(epggrab_cron_multi, current_time.tv_sec, &ret_time))
+  {
+    return ret_time;
+  }
+  else
+  {
+    return 0;
+  }
+}
 
 /* **************************************************************************
  * Count the number of EPG grabbers of a specified type
