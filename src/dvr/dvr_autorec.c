@@ -406,6 +406,7 @@ dvr_autorec_create(const char *uuid, htsmsg_t *conf)
   dae->dae_start = -1;
   dae->dae_start_window = -1;
   dae->dae_enabled = 1;
+  dae->dae_record = DVR_AUTOREC_RECORD_DVR_PROFILE;
   dae->dae_config = dvr_config_find_by_name_default(NULL);
   LIST_INSERT_HEAD(&dae->dae_config->dvr_autorec_entries, dae, dae_config_link);
 
@@ -996,10 +997,12 @@ dvr_autorec_entry_class_content_type_list(void *o, const char *lang)
   return m;
 }
 
-htsmsg_t *
+static htsmsg_t *
 dvr_autorec_entry_class_dedup_list ( void *o, const char *lang )
 {
   static const struct strtab tab[] = {
+    { N_("Use DVR configuration"),
+        DVR_AUTOREC_RECORD_DVR_PROFILE },
     { N_("Record all"),
         DVR_AUTOREC_RECORD_ALL },
     { N_("All: Record if EPG/XMLTV indicates it is a unique programme"),
@@ -1072,6 +1075,7 @@ dvr_autorec_entry_class_owner_opts(void *o, uint32_t opts)
 
 CLASS_DOC(dvrautorec)
 PROP_DOC(duplicate_handling)
+PROP_DOC(autorec_directory)
 
 /* We provide several category drop-downs to make it easy for user
  * to select several. So abstract the properties away since they
@@ -1130,6 +1134,7 @@ const idclass_t dvr_autorec_entry_class = {
                      "defined in the DVR configuration and puts all "
                      "recordings done by this entry into the "
                      "subdirectory named here. See Help for more info."),
+      .doc      = prop_doc_autorec_directory,
       .off      = offsetof(dvr_autorec_entry_t, dae_directory),
       .opts     = PO_EXPERT,
     },
@@ -1354,8 +1359,10 @@ const idclass_t dvr_autorec_entry_class = {
       .type     = PT_U32,
       .id       = "record",
       .name     = N_("Duplicate handling"),
-      .desc     = N_("Duplicate recording handling."),
-      .def.i    = DVR_AUTOREC_RECORD_ALL,
+      .desc     = N_("How to handle duplicate recordings. The 'Use DVR "
+                     "Configuration' value (the default) inherits the "
+                     "settings from the assigned DVR configuration"),
+      .def.i    = DVR_AUTOREC_RECORD_DVR_PROFILE,
       .doc      = prop_doc_duplicate_handling,
       .off      = offsetof(dvr_autorec_entry_t, dae_record),
       .list     = dvr_autorec_entry_class_dedup_list,
