@@ -342,7 +342,6 @@ dvb_psi_parse_pmt
     composition_id = -1;
     ancillary_id = -1;
     rds_uecp = 0;
-    position = 0;
     ac4 = 0;
     tt_position = 1000;
     lang = NULL;
