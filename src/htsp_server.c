@@ -51,7 +51,6 @@
 
 static void *htsp_server, *htsp_server_2;
 
-#define HTSP_PROTO_VERSION 37
 #define HTSP_PROTO_VERSION 44
 
 #define HTSP_ASYNC_OFF  0x00
